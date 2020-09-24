@@ -1,7 +1,8 @@
 <?php
-	// header('Access-Control-Allow-Origin: *');
-	// header('Access-Control-Allow-Headers: *');
-	// header('Access-Control-Allow-Credentials: true');
+	header('Access-Control-Allow-Origin: *');
+	header('Access-Control-Allow-Headers: *');
+	header('Access-Control-Allow-Credentials: true');
+	
 	function timestampToLocal($sql, $formatDate)
 	{
 		$time_res = $sql->query("SELECT * FROM `time`");

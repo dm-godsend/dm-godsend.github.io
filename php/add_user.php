@@ -6,7 +6,7 @@ $out["flag"] = 0;
 $out["usr"] = array();
 //$out["time"] = date("H:i");
 
-$id = $_POST["id"];
+// $id = $_POST["id"];
 $name = $_POST["name"];
 
 $ava = $_POST["ava"];

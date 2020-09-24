@@ -5,13 +5,17 @@
 	$out["flag"] = 0;
 	$out["usr"] = array();
 
-	$id = $_GET["id"];
-	$name = $_GET["name"];
-	$vk_id = $_GET["vk_id"];
+	// $vk_id = $_GET["vk_id"];
 	//webapi:Request("get_user", {id = 1})
-	if (isset($name)) $query = "SELECT * FROM `users` WHERE `name`='$name'";
-	if (isset($id))  $query = "SELECT * FROM `users` WHERE `id`='$id'";
-	if (isset($vk_id))  $query = "SELECT * FROM `users` WHERE `vk_id`='$vk_id'";
+	if (isset($_GET["name"])) {
+		$name = $_GET["name"];
+		$query = "SELECT * FROM `users` WHERE `name`='$name'";
+	}
+	if (isset($_GET["id"])) {
+		$id = $_GET["id"];
+		$query = "SELECT * FROM `users` WHERE `id`='$id'";
+	}
+	// if (isset($vk_id))  $query = "SELECT * FROM `users` WHERE `vk_id`='$vk_id'";
 	//В обоих запросах добавить условие на сортировку по классам!!!
 	if ($res = $mysqli->query($query))
 	{
